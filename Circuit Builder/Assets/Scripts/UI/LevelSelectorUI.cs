@@ -7,11 +7,10 @@ public class LevelSelectorUI : MonoBehaviour
 {
     public GameObject[] levelSelectorButtons;
 
-    private void Start() {
-        levelSelectorButtons = GameObject.FindGameObjectsWithTag("LevelSelectorButton");
-    }
 
-    private void Update() {
+    private void Start() {
+
+        levelSelectorButtons = GameObject.FindGameObjectsWithTag("LevelSelectorButton");
 
         for (int i = 0; i < GameManager.gameManager.farthestLevel; i++) {
             Button b1 = levelSelectorButtons[i].GetComponent<Button>();
